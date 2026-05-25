@@ -1,0 +1,178 @@
+### Get all property listings
+GET http://localhost:8080/api/firestore/properties
+
+### Create a new property listing
+POST http://localhost:8080/api/firestore/properties
+Content-Type: application/json
+
+{
+"email": "john@example.com",
+"firstName": "John",
+"lastName": "Doe",
+"phone": "0712345678",
+"userEmail": "john@example.com",
+"userId": "user123",
+"title": "Apartament modern",
+"description": "Apartament cu 3 camere, renovat recent.",
+"price": 90000,
+"rooms": 3,
+"bathrooms": 1,
+"surfaceArea": 75.5,
+"photoUrls": [
+"https://example.com/image1.jpg",
+"https://example.com/image2.jpg"
+],
+"photoCount": 2,
+"location": {
+"lat": 46.77,
+"lng": 23.62
+},
+"address": "Str. Memorandumului 3",
+"marker": {
+"lat": 46.77,
+"lng": 23.62
+},
+"amenities": ["balcony", "central heating"],
+"customAmenities": ["view to the park"],
+"furnished": "true",
+"transactionType": "sale",
+"propertyType": "apartment"
+}
+
+### Sorted by price descending
+GET http://localhost:8080/api/firestore/properties/sorted?sort=price-high-to-low
+
+### Sorted by price ascending
+GET http://localhost:8080/api/firestore/properties/sorted?sort=price-low-to-high
+
+### Sorted by newest
+GET http://localhost:8080/api/firestore/properties/sorted?sort=newest
+
+### No sorting (recommended)
+GET http://localhost:8080/api/firestore/properties/sorted?sort=recommended
+
+### Get favorites for a userId
+GET http://localhost:8080/api/firestore/users/CmXswKA93ddeN8xihCIUSp5ZYkF3/favorites
+
+### Add favorite (propertyId)
+POST http://localhost:8080/api/firestore/users/CmXswKA93ddeN8xihCIUSp5ZYkF3/favorites/1744310910454
+
+### Remove favorite (propertyId)
+DELETE http://localhost:8080/api/firestore/users/CmXswKA93ddeN8xihCIUSp5ZYkF3/favorites/1744310910454
+
+### Check if property is favorite
+GET http://localhost:8080/api/firestore/users/CmXswKA93ddeN8xihCIUSp5ZYkF3/favorites/1744310910454/check
+
+### Get all users
+GET http://localhost:8080/api/firestore/users
+
+### Get all markers
+GET http://localhost:8080/api/firestore/properties/markers
+
+### Get all markers posted by a user
+GET http://localhost:8080/api/firestore/properties/markers/user/CmXswKA93ddeN8xihCIUSp5ZYkF3
+
+### Schedule a viewing
+POST http://localhost:8080/api/firestore/viewings
+Content-Type: application/json
+
+{
+  "userId": "CmXswKA93ddeN8xihCIUSp5ZYkF3",
+  "propertyId": "1744310910454",
+  "date": "2025-06-21",
+  "time": "13:00"
+}
+
+### Submit a review
+POST http://localhost:8080/api/firestore/reviews
+Content-Type: application/json
+
+{
+  "rating": 4,
+  "review": "As a real estate investor, I've seen many platforms. HomeSurfers is by far the most professional and efficient.",
+  "fullName": "Radu Mihai",
+  "email": "radumihai@gmail.com"
+}
+
+### Submit a review
+POST http://localhost:8080/api/firestore/reviews
+Content-Type: application/json
+
+{
+  "rating": 5,
+  "review": "Super!",
+  "fullName": "Anonymous",
+  "email": ""
+}
+
+### Submit a review
+POST http://localhost:8080/api/firestore/reviews
+Content-Type: application/json
+
+{
+  "rating": 5,
+  "review": "HomeHunters made buying our first home incredibly easy. The platform is intuitive and the support team was amazing!",
+  "fullName": "Maria Popescu",
+  "email": "mariapopescu@gmail.com"
+}
+
+### Submit a review
+POST http://localhost:8080/api/firestore/reviews
+Content-Type: application/json
+
+{
+  "rating": 5,
+  "review": "Fantastic experience! Great communication and service.",
+  "fullName": "Valentina Baluță",
+  "email": "valentinabaluta@gmail.com"
+}
+
+### Submit a review
+POST http://localhost:8080/api/firestore/reviews
+Content-Type: application/json
+
+{
+  "rating": 5,
+  "review": "Sold my apartment in just 2 weeks! The process was transparent and I got the best price possible.",
+  "fullName": "Alexandru Ionescu",
+  "email": "alexandruionescu@gmail.com"
+}
+
+### Get all reviews
+GET http://localhost:8080/api/firestore/reviews/latest
+
+### Get average rating
+GET http://localhost:8080/api/firestore/reviews/average-rating
+
+### Get property by userId
+GET http://localhost:8080/api/firestore/properties/user/CmXswKA93ddeN8xihCIUSp5ZYkF3
+
+### Get recommended properties (uses FastAPI internally)
+GET http://localhost:8080/api/firestore/properties/sorted?sort=recommended&userId=CmXswKA93ddeN8xihCIUSp5ZYkF3
+Accept: application/json
+
+### Get viewings for a user
+GET http://localhost:8080/api/firestore/viewings/user/CmXswKA93ddeN8xihCIUSp5ZYkF3
+
+### Price prediction
+POST http://127.0.0.1:8000/calculate-price
+Content-Type: application/json
+
+{
+  "firstName": "Ion",
+  "lastName": "Popescu",
+  "email": "ion@example.com",
+  "phone": "0712345678",
+  "propertyType": "apartment",
+  "transactionType": "renting",
+  "furnished": "furnished",
+  "address": "Strada Exemplu 1",
+  "rooms": 2,
+  "bathrooms": 1,
+  "surfaceArea": 50.0,
+  "amenities": ["wifi", "air-conditioning"],
+  "customAmenities": [],
+  "title": "Apartament mic",
+  "description": "Mic și luminos",
+  "price": 0.0
+}

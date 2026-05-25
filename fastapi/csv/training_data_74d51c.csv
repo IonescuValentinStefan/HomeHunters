@@ -1,0 +1,16 @@
+id,title,description,surfaceArea,rooms,bathrooms,amenities,transactionType,furnished,is_favorite
+1736284902479,Cozy 2-Bedroom Apartment in Downtown,A bright and spacious apartment located near all major attractions.,0.0,2,0,[],renting,unknown,1
+1736284951220,Modern Family Home with Garden,"Beautiful house with a large backyard, perfect for families.",0.0,3,0,[],renting,unknown,1
+1736285126195,Chic Studio in the Heart of the City,"Compact yet comfortable, ideal for professionals.",0.0,1,0,[],renting,unknown,1
+1736285167920,Luxury Villa Near the Park,Enjoy stunning views and modern amenities in this exclusive villa.,0.0,4,0,[],renting,unknown,1
+1736285365431,Trendy 1-Bedroom Apartment in Tech Hub,Located close to major tech offices and public transport.,0.0,1,0,[],renting,unknown,1
+1736285417716,Stylish Townhouse in a Quiet Neighborhood,A modern townhouse with easy access to central Bucharest.,0.0,3,0,[],renting,unknown,1
+1736285645850,Exclusive Penthouse with Panoramic Views,High-end finishes and breathtaking city views.,0.0,2,0,[],renting,unknown,0
+1736285835260,Cozy 2-Bedroom Apartment in Downtown,A bright and spacious apartment located near all major attractions.,0.0,2,0,[],selling,unknown,1
+1736285912401,Luxury Penthouse with Modern Amenities and Stunning Views,High-end finishes and amazing city views.,0.0,2,0,[],selling,unknown,1
+1736286076762,Charming Studio Apartment,"Perfectly located studio with modern finishes, ideal for singles or couples looking for comfort and convenience.",0.0,1,0,[],renting,unknown,1
+1736289518034,Cozy Apartament,short description,0.0,2,0,[],selling,unknown,0
+1744310910454,Cozy 2-Bedroom Apartment,Renovated apartment with balcony,85.0,2,1,"['pool', 'parking', 'balcony', 'dishwasher-washing', 'heating']",renting,unfurnished,1
+1744311179055,Modern Downtown Loft,Spacious loft with city views,65.0,1,1,"['gym', 'parking', 'elevator', 'air-conditioning', 'wifi']",renting,furnished,1
+1744627085278,Casa cu vedere la dambovita,Sunt foarte multe magazine pe langa,60.0,2,2,"['elevator', 'garden', 'air-conditioning']",selling,furnished,0
+1750109294767,Modern Apartment for Rent,Spacious and bright apartment in a quiet neighborhood...,50.0,2,1,"['wifi', 'air-conditioning']",renting,furnished,0

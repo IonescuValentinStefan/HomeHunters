@@ -1,0 +1,62 @@
+### 1
+POST http://localhost:8080/api/firestore/properties
+Content-Type: application/json
+
+{
+  "email": "ana@gmail.com",
+  "firstName": "Ana",
+  "lastName": "Popescu",
+  "phone": "0723456789",
+  "userEmail": "ana@gmail.com",
+  "userId": "hLUqxHe7zDczHIYgPRrjOrNCIjk2",
+  "title": "Cozy Studio in Grozăvești",
+  "description": "Perfect for students, close to campus.",
+  "price": 350,
+  "rooms": 1,
+  "bathrooms": 1,
+  "surfaceArea": 28,
+  "photoUrls": [
+    "https://firebasestorage.googleapis.com/v0/b/homehunters-92c76.firebasestorage.app/o/property_photos%2Fproperty_default.jpg?alt=media&token=3f9afaee-5059-4378-a5ab-ff2ef03021f8"
+  ],
+  "photoCount": 1,
+  "location": { "lat": 44.4355, "lng": 26.0486 },
+  "address": "Splaiul Independenței 313, Sector 6, Bucharest",
+  "amenities": ["Wi-Fi", "Central Heating"],
+  "customAmenities": ["Campus View"],
+  "furnished": "furnished",
+  "transactionType": "renting",
+  "propertyType": "studio"
+}
+
+### 2
+POST http://localhost:8080/api/firestore/properties
+Content-Type: application/json
+
+{
+  "email": "ana@gmail.com",
+  "firstName": "Ana",
+  "lastName": "Popescu",
+  "phone": "0723456789",
+  "userEmail": "ana@gmail.com",
+  "userId": "hLUqxHe7zDczHIYgPRrjOrNCIjk2",
+  "title": "1-Bedroom Apartment Politehnica",
+  "description": "Quiet area, ideal for students or couples.",
+  "price": 420,
+  "rooms": 2,
+  "bathrooms": 1,
+  "surfaceArea": 42,
+  "photoUrls": [
+    "https://firebasestorage.googleapis.com/v0/b/homehunters-92c76.firebasestorage.app/o/property_photos%2Fproperty_default.jpg?alt=media&token=3f9afaee-5059-4378-a5ab-ff2ef03021f8"
+  ],
+  "photoCount": 1,
+  "location": { "lat": 44.4347, "lng": 26.0479 },
+  "address": "Splaiul Independenței 313, Sector 6, Bucharest",
+  "amenities": ["Wi-Fi", "Washing Machine"],
+  "customAmenities": ["5 min from metro"],
+  "timestamp": { "seconds": 1736145600, "nanos": 0 },
+  "furnished": "yes",
+  "transactionType": "renting",
+  "propertyType": "apartment"
+}
+
+### 3–10
